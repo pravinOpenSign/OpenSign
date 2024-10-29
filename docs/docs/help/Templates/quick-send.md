@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-title: Quickly Send
+title: Quick Send
 ---
 
 # How to use the OpenSign Quick Send feature to send a document for signature using a template
