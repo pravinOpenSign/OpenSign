@@ -1,6 +1,6 @@
 ---
 sidebar_position: 4
-title: Setting up an OpenSign template for public signing
+title: Public template
 ---
 
 # What is the OpenSign Public profile?
