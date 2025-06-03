@@ -38,7 +38,10 @@ The **Allowed Signature Types** section defines which signature methods are avai
 
 Admins can enforce company-wide signing policies by restricting available signature methods platform-wide.
 
-**Step 1:** Open the profile menu and select **Console Application** to launch the console.
+**Step 1:** Open the profile menu and select **Console** to launch the console.
+
+<img width="960" alt="Console menu" src="https://github.com/user-attachments/assets/a1c69ce7-1bd6-4311-8921-3167ffcad75f" />
+
 
 **Step 2:** Once the Console Application loads, navigate to the **General** menu. Here, admins can configure the allowed signature types at the organization level.
 
