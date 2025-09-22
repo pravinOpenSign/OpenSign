@@ -61,7 +61,7 @@ Navigate to **Settings > Preferences** to configure user-level signature types.
 
 If a user sets preferred types here, only those will appear when adding signature or initial widgets during document creation.
 
-<img width="861" height="480" alt="signatures" src="https://github.com/user-attachments/assets/69d0851c-57f2-42e5-af6e-419f6d8821c2" />
+<img width="861" alt="signatures" src="https://github.com/user-attachments/assets/69d0851c-57f2-42e5-af6e-419f6d8821c2" />
 
 ### 📄 Document-Level
 
