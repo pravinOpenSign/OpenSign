@@ -118,8 +118,8 @@ The **Prefill Widgets** feature lets document creators prefill specific fields b
 - **Dropdown** – Preselect an option  
 - **Radio Button** – Prefill with a selected choice  
 - **Checkbox** – Prefill as checked or unchecked  
-- **Image** – Insert a default image (e.g., logo or stamp) 
-
+- **Image** – Insert a default image (e.g. logo or stamp) 
+- **Draw** – Allows the user to draw directly in this widget; use it when a prefill drawing is required.
 ---
 
 ### Add Widgets for Signers
