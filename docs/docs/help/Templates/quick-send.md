@@ -149,6 +149,214 @@ After completing all assigned fields, the signer should click the ‘Finish’ b
      
 <img width="800" alt="OpenSignFinalStep" src="https://github.com/user-attachments/assets/f4783aa0-2879-4ec2-9ddc-16d59f3a1fc0" />
 
+# How Prefill Widgets Work in Bulk Send
+
+This guide explains how **Prefill widgets** work in **Bulk Send**, including UI behavior, validations, CSV import rules, and signer handling. It helps you configure templates, prefill data correctly, and send documents at scale with confidence.
+
+---
+
+## 1. Overview of Prefill in Bulk Send
+
+Prefill allows you to add values to fields **before sending** documents to recipients. In Bulk Send, prefill data can be:
+
+* Entered manually in the Bulk Send screen, or
+* Imported using a CSV file
+
+Prefill widgets support **multiple signers**, **required and optional fields**, and **different widget types**.
+
+---
+
+## 2. Using Prefill Widgets (Without CSV)
+
+### How to Send Documents Using Bulk Send
+
+1. Add prefill widgets to the template and save it.
+2. Click the **Bulk Send** button.
+3. A popup opens showing:
+
+   * All added prefill widgets
+   * Roles defined in the template
+4. Fill in the prefill widget values and assign signers to each role by entering their email addresses.
+5. To create multiple documents, click **Add New**.
+
+   * Each row represents one document
+   * Prefill widgets are shown as a group per document
+6. You can add up to **50 signers** per Bulk Send session.
+
+**Example:**
+
+* 1 role → up to 50 documents
+* 2 roles → up to 25 documents
+* 3 roles → up to 16 documents
+
+7. Click **Send** to generate documents and email signing requests to recipients.
+
+---
+
+### 2.1 Date Widget
+
+* Displays the date format defined in the template
+* Users can modify the date before sending
+* Supports multiple date widgets with different formats in the same document
+
+---
+
+### 2.2 Text Widget
+
+* Displays default text if configured in the template
+* Shows a validation error if marked as **required** and left empty
+* Optional text fields can be left blank
+* Works with multiple signers
+* Supports multiple text prefill widgets
+
+---
+
+### 2.3 Checkbox Widget
+
+* Shows a validation error if marked as **required** and no option is selected
+* Displays selected options correctly in the prefill UI
+* Optional checkboxes can be left unselected
+* Works with multiple signers
+* Supports **Hide Labels** (only checkboxes appear in the document)
+* Supports multiple checkbox prefill widgets
+
+---
+
+### 2.4 Dropdown Widget
+
+* Shows a validation error if marked as **required** and no value is selected
+* Optional dropdowns can be left empty
+* Displays selected values correctly in the prefill UI
+* Works with multiple signers
+
+---
+
+### 2.5 Radio Button Widget
+
+* Shows a validation error if marked as **required** and no option is selected
+* Optional radio buttons can be left empty
+* Displays selected options correctly
+* Works with multiple signers
+* Supports **Hide Labels** (only radio buttons appear)
+* Supports multiple radio button prefill widgets
+
+---
+
+### 2.6 Image Widget
+
+* Displays the uploaded image if it was added during template creation
+* Shows a validation error if marked as **required** and no image is uploaded
+* Optional image fields can be left empty
+* Works with multiple signers
+* Supports multiple image prefill widgets
+
+---
+
+### 2.7 Draw Widget
+
+* Displays the drawn image if it was added during template creation
+* Shows a validation error if marked as **required** and no drawing is provided
+* Optional draw fields can be left empty
+* Works with multiple signers
+* Supports multiple draw prefill widgets
+
+---
+
+## 3. CSV Import Rules for Bulk Send
+
+### 3.1 General CSV Rules
+
+* Only **CSV files** are supported
+* Other file types are not allowed
+* Validation errors clearly display missing or incorrect column names
+
+---
+
+### 3.2 Date Widget (CSV Import)
+
+* Dates must be provided in **MM.DD.YYYY** format in the CSV
+* Example: If the template displays dates as `January 16, 2026`, the CSV value must be `01.16.2026`
+* Dates are automatically converted to the template format after import
+* Incorrect date formats are ignored
+* Works with multiple rows and different signers
+* Imported dates can be edited before sending
+
+---
+
+### 3.3 Text Widget (CSV Import)
+
+* Text values are imported as-is
+* Capitalization is preserved
+* Works with multiple rows and different signers
+* Imported text can be edited before sending
+
+---
+
+### 3.4 Checkbox Widget (CSV Import)
+
+* Multiple checkbox values are supported
+* Use `|` to separate values (example: `Option1|Option2`)
+* Works with multiple rows and different signers
+* Users can modify selections after import
+* Imported values match what appears on the Bulk Send screen
+
+---
+
+### 3.5 Dropdown Widget (CSV Import)
+
+* Only **one value** is allowed per dropdown
+* The value must match one of the dropdown options
+* Multiple values will cause an error
+* Users can change selections after import
+* Imported values match what appears on the Bulk Send screen
+
+---
+
+### 3.6 Radio Button Widget (CSV Import)
+
+* Only **one value** is allowed
+* The value must match one of the radio options
+* Multiple values are not supported
+* Users can modify selections after import
+* Imported values match what appears on the Bulk Send screen
+
+---
+
+### 3.7 Image and Draw Widgets (CSV Import)
+
+* Importing Image and Draw widgets via CSV is **not supported**
+
+---
+
+## 4. Bulk Send Limits and Validations
+
+* Bulk Send is **not available** for shared templates accessed via Teams login
+* Maximum rows per Bulk Send: **50**
+* Importing more than 50 rows shows:
+
+  > *“Limit reached for Bulk send.”*
+* Users can manually add rows using **Add New** up to the 50-row limit
+* CSV import and manual entry can be combined
+* Errors appear consistently when the limit is exceeded
+
+---
+
+## 5. Sending and Credit Validation
+
+* Each document sent via Bulk Send consumes **1 API credit**
+* If API credits are unavailable, Bulk Send is blocked with an error message
+* Invalid email addresses are rejected with validation errors
+
+---
+
+## 6. Final Document Accuracy
+
+* Any changes made in the Bulk Send screen are reflected in the final document
+* Rows with missing **required** CSV values are skipped
+* Rows with empty **optional** fields are still processed successfully
+
+---
+
 ## Additional Information
 - All fields marked with an asterisk (*) must be completed before the document can be submitted.
 - Ensure that the document format is supported by OpenSign before uploading.
