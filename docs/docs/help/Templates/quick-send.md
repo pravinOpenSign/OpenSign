@@ -132,6 +132,7 @@ Checkbox widgets support multiple values in CSV.
 Use the **pipe separator `|`** between options.
 
 **Example:** Option-1|Option-2
+
 ---
 
 ## Unsupported Prefill Imports
